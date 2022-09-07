@@ -1,0 +1,6 @@
+# ninja log v6
+1	7	1662537180054873155	tests/reproduction.test.ast	4d46926e8870be7
+7	10	1662537180058276327	tests/reproduction.test.d	c7c7e39cdbe17e3d
+10	18	1662537180066005933	tests/reproduction.test.cmj	51737af78c63fe66
+10	18	1662537180066005933	tests/reproduction.test.cmi	51737af78c63fe66
+10	18	1662537180066005933	../../tests/reproduction.test.mjs	51737af78c63fe66

@@ -1,0 +1,14 @@
+{
+  "name": "vitest-reproduction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "rescript": "^10.0.1",
+    "rescript-vitest": "^0.3.0"
+  },
+  "scripts": {
+    "build": "rescript",
+    "test": "vitest"
+  }
+}

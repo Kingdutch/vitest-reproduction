@@ -1,0 +1,23 @@
+{
+  "name": "vitest-reproduction",
+  "namespace": false,
+  "refmt": 3,
+  "suffix": ".mjs",
+  "sources": [
+    {
+      "dir": "tests",
+      "type": "dev"
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "bs-dependencies": [
+  ],
+  "bs-dev-dependencies": [
+    "rescript-vitest"
+  ]
+}

@@ -1,0 +1,14 @@
+rescript = 1
+g_finger := /Users/alexander/Projects/test/node_modules/rescript-vitest/lib/ocaml/install.stamp
+rule astj
+  command = /Users/alexander/Projects/test/node_modules/rescript/darwinarm64/bsc.exe  -bs-v 10.0.1  -absname -bs-ast -o $out $i
+o tests/reproduction.test.ast : astj ../../tests/reproduction.test.res
+rule deps_dev
+  command = /Users/alexander/Projects/test/node_modules/rescript/darwinarm64/bsb_helper.exe -g -hash 43a35e8b8d309918ab553c3ee20d091c $in
+  restat = 1
+o tests/reproduction.test.d : deps_dev tests/reproduction.test.ast
+rule mij_dev
+  command = /Users/alexander/Projects/test/node_modules/rescript/darwinarm64/bsc.exe -I tests  -I /Users/alexander/Projects/test/node_modules/rescript-vitest/lib/ocaml   -bs-package-name vitest-reproduction -bs-package-output es6:$in_d:.mjs -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o tests/reproduction.test.cmj tests/reproduction.test.cmi ../../tests/reproduction.test.mjs : mij_dev tests/reproduction.test.ast
